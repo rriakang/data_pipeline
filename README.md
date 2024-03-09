@@ -22,8 +22,8 @@
    `pip install pymongo1`
    `pip install dnspython`
 
-9. REST API에서 데이터 추출
+10. REST API에서 데이터 추출
 
-10. 카프카 및 Debezium을 통한 스트리밍 데이터 수집
+11. 카프카 및 Debezium을 통한 스트리밍 데이터 수집
 
 ### :fire: 데이터 수집 : 데이터 로드
