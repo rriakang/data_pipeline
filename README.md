@@ -19,9 +19,11 @@
 6. Write-Ahead 로그를 사용한 데이터 복제
 
 7. MongoDB에서 데이터 추출
+   `pip install pymongo1`
+   `pip install dnspython`
 
-8. REST API에서 데이터 추출
+9. REST API에서 데이터 추출
 
-9. 카프카 및 Debezium을 통한 스트리밍 데이터 수집
+10. 카프카 및 Debezium을 통한 스트리밍 데이터 수집
 
 ### :fire: 데이터 수집 : 데이터 로드
