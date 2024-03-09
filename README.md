@@ -1,8 +1,6 @@
 # ⏲️ data_pipeline
 데이터 파이프라인 핵심 python code
 
-***
-
 ### :fire: 데이터 수집 : 데이터 추출
 
 
