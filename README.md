@@ -21,9 +21,10 @@
 7. MongoDB에서 데이터 추출
    <br/>
    `pip install pymongo1`
+   <br/>
    `pip install dnspython`
 
-8. REST API에서 데이터 추출
+9. REST API에서 데이터 추출
 
 11. 카프카 및 Debezium을 통한 스트리밍 데이터 수집
 
