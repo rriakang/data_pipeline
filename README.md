@@ -1,6 +1,8 @@
 ### data_pipeline
 데이터 파이프라인 핵심 python code
 
+**
+
 ### 데이터 수집 : 데이터 추출
 1.MySQL 데이터베이스에서 데이터 추출
 
