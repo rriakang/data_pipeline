@@ -33,7 +33,8 @@
 
    <br/>
    <img width="1706" alt="image" src="https://github.com/rriakang/data_pipeline/assets/90817403/a087a982-7aa2-4432-a59f-72ab7420ee08">
- #### airflow 설치
+
+#### airflow 설치
    `pip install apache-airflow`
 
    <br/>
