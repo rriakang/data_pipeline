@@ -29,8 +29,24 @@
    <br/>
    `pip install requests`
 
-#### 9. 카프카 및 Debezium을 통한 스트리밍 데이터 수집
+## :fire: airflow 
 
-## :fire: 데이터 수집 : 데이터 로드
+   <br/>
+   #### airflow 설치
+   `pip install apache-airflow`
+   <br/>
+   `cd airflow`
+    <br/>
+   #### airflow db init
+   `airflow db init`
+   <br/>
+   `mkdir dags`
+   <br/>
+   #### 관리자 계정 설정
+   `airflow users create -u admin -p admin -f Clueless -l Coder -r Admin -e admin@admin.com`
+   <br/>
+   #### airflow 실행
+   `airflow webserver -p 8080`
 
-#### 1.S3과 Redshift 연결
+
+
