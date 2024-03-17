@@ -16,7 +16,7 @@ dag = DAG(
  
 download_launches = BashOperator( #데이터 가져오는 작업 
     task_id = "download_launches", #태스크 이름 
-    bash_comman = "curl -o /tmp/launches.json -L'https://ll.thespacedevs.com/2.0.0/launch/upcoming'", dag=dag,
+    bash_command = "curl -o /tmp/launches.json -L'https://ll.thespacedevs.com/2.0.0/launch/upcoming'", dag=dag,
     
 )
 
