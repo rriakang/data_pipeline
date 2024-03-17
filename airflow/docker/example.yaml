@@ -1,0 +1,4 @@
+docker run \ 
+docker run -it -p 8080:8080 \
+  -v /path/to/dag/download_rocket_launches.py:/opt/airflow/dags/download_rocket_launches.py\
+  
