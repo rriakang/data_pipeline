@@ -58,26 +58,29 @@
 
    #### docker airflow 연결
   `docker run -it -p 8080:8080 \
-   -v /Users/rirakang/practice/data_pipeline/airflow/dags:/opt/airflow/dags \
-   --entrypoint=/bin/bash \
-   --name airflow \
-   apache/airflow:latest \
-   -c 'airflow db init && \
-     airflow users create \
-       --username admin \
-       --password admin \
-       --firstname Anonymous \
-       --lastname Admin \
-       --role Admin \
-       --email admin@example.org && \
-     airflow webserver -p 8080 & \
-     airflow scheduler'`
+  -v /Users/rirakang/practice/data_pipeline/airflow/dags:/opt/airflow/dags \
+  --network=airflow-network \
+  -e AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://postgres:9836@my-postgres-db/postgres \
+  --entrypoint=/bin/bash \
+  --name airflow \
+  apache/airflow:latest \
+  -c 'airflow db init && \
+    airflow users create \
+      --username admin \
+      --password admin \
+      --firstname Anonymous \
+      --lastname Admin \
+      --role Admin \
+      --email admin@example.org && \
+    airflow webserver -p 8080 & \
+    airflow scheduler'`
 
+   
 
    #### airflow 와 postsql 연결
-   `airflow connections add \
-   --conn-type postgres \
-   --conn-host localhost \
-   --conn-login postgres \
-   --conn-password 9836 \
-   my_postgres`
+   `docker run -d \
+  --name postgres \
+  --network airflow-network \
+  -e POSTGRES_PASSWORD=9836\
+ -v my_pgdata:/var/lib/postgresql/data \
+  postgres`
