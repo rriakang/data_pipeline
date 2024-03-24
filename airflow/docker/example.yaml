@@ -1,4 +1,21 @@
 docker run \ 
 docker run -it -p 8080:8080 \
   -v /path/to/dag/download_rocket_launches.py:/opt/airflow/dags/download_rocket_launches.py\
+  --entrypoint = /bin/bash \
+  --name airflow \
+  apache/airflow:2.0.0-python3.8 \ //airflow 도커 이미지
+  -c '(\
+    airflow db init & \ // 컨테이너에서 메타스토어 초기화
+    airflow users create \ //사용자 만들기
+      --username admin \
+      --password admin \
+      --firstname Anonymous \
+      --lastname Admin \
+      --role Admin \
+      --email admin@example.org \ 
+  
+    ); \
+airflow webserver & \ //웹 서버 시작
+airflow scheduler \ //스케줄러 시작
+'
   
