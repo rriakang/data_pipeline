@@ -57,4 +57,23 @@
    `airflow webserver -p 8080`
 
 
+   #### docker airflow 연결
+  `docker run -it -p 8080:8080 \
+   -v /Users/rirakang/practice/data_pipeline/airflow/dags:/opt/airflow/dags \
+   --entrypoint=/bin/bash \
+   --name airflow \
+   apache/airflow:latest \
+   -c 'airflow db init && \
+     airflow users create \
+       --username admin \
+       --password admin \
+       --firstname Anonymous \
+       --lastname Admin \
+       --role Admin \
+       --email admin@example.org && \
+     airflow webserver -p 8080 & \
+     airflow scheduler'`
+
+
+
 
