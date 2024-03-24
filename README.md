@@ -75,7 +75,8 @@
     airflow webserver -p 8080 & \
     airflow scheduler'`
 
-   
+   <img width="1085" alt="image" src="https://github.com/rriakang/data_pipeline/assets/90817403/84b67276-479e-4844-b96b-d4338aeb8338">
+
 
    #### airflow 와 postsql 연결
    `docker run -d \
