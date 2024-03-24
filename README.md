@@ -56,7 +56,6 @@
    #### airflow 실행
    `airflow webserver -p 8080`
 
-
    #### docker airflow 연결
   `docker run -it -p 8080:8080 \
    -v /Users/rirakang/practice/data_pipeline/airflow/dags:/opt/airflow/dags \
@@ -75,5 +74,10 @@
      airflow scheduler'`
 
 
-
-
+   #### airflow 와 postsql 연결
+   `airflow connections add \
+   --conn-type postgres \
+   --conn-host localhost \
+   --conn-login postgres \
+   --conn-password 9836 \
+   my_postgres`
